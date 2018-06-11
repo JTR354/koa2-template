@@ -1,7 +1,7 @@
-Koa2 RESTful API 服务器脚手架
+Koa2 RESTful API 模版
 =============================
 
-这是一个基于Koa2的轻量级RESTful API Server脚手架，支持ES6。
+这是一个基于Koa2的轻量级RESTful API 模版，支持ES6。
 
 **注意：因升级Koa版本至2.3.0，为配合相应的依赖项，故需要Node.js版本大于等于v8.0.0（建议v9.9.0），NPM大于等于v5.0.0。建议使用yarn代替npm。**
 
@@ -9,13 +9,10 @@ Koa2 RESTful API 服务器脚手架
 
 可选用redis等非关系型数据库。考虑RESTful API Server的实际开发需要，这里通过sequelize.js作为PostgreSQL, MySQL, MariaDB, SQLite, MSSQL关系型数据库的ORM，如无需关系型ORM，`npm remove sequelize -S`，然后删除`src/lib/sequelize.js`文件。
 
-此脚手架只安装了一些和Koa2不冲突的搭建RESTful API Server的必要插件，附带每一个插件的说明。采用ESlint进行语法检查。
+此模版只安装了一些和Koa2不冲突的搭建RESTful API Server的必要插件，附带每一个插件的说明。采用ESlint进行语法检查。
 
-因此脚手架主要提供RESTful API，故暂时不考虑前端静态资源处理，只提供静态资源访问的基本方法便于访问用户上传到服务器的图片等资源。基本目录结构与vue-cli保持一致，可配合React、AngularJS、Vue.js等前端框架使用。在Cordova/PhoneGap中使用时需要开启跨域功能。
+因此模版主要提供RESTful API，故暂时不考虑前端静态资源处理，只提供静态资源访问的基本方法便于访问用户上传到服务器的图片等资源。基本目录结构与vue-cli保持一致，可配合React、AngularJS、Vue.js等前端框架使用。在Cordova/PhoneGap中使用时需要开启跨域功能。
 
-**免责声明：** 此脚手架仅为方便开发提供基础环境，任何人或组织均可随意克隆使用，使用引入的框架需遵循原作者规定的相关协议（部分框架列表及来源地址在下方）。采用此脚手架产生的任何后果请自行承担，本人不对此脚手架负任何法律责任，使用即代表同意此条。
-
-目前暂未加入软件测试模块，下一个版本会加入该功能并提供集成方案。建议自行集成jest。
 
 开发使用说明
 ------------
@@ -647,88 +644,3 @@ request.post('/api').form({key:'value'}), function(err,httpResponse,body){ /* ..
 ```
 
 删除gulpfile.js中的lint、eslint_start两个任务，并且把default改为“gulp.task('default', ['start']”。
-
-更新说明
---------
-
-*v0.2.6 2018年03月24日22:16:43*
-
-1.	升级依赖项版本（node9.9.0）。
-
-*v0.2.5 2018年01月13日10:37:29*
-
-1.	升级依赖项版本（node9.3.0）。
-2.	添加了Token使用说明。
-
-*v0.2.4 2017年12月01日14:16:03*
-
-1.	升级依赖项版本（node9.2.0）。
-
-*v0.2.3 2017年10月23日23:26:56*
-
-1.	升级依赖项版本（node8.7.0）。
-
-*v0.2.2 2017年09月17日17:45:07*
-
-1.	升级依赖项版本（在node8.5.0测试）。
-
-*v0.2.1 2017年07月19日19:38:19*
-
-1.	移除MySQL模块（重复了）。
-2.	添加更详细的说明。
-
-*v0.2 2017年07月16日22:48:34*
-
-1.	升级koa为2.3.0版本。
-2.	将koa-session2替换为koa-jwt，添加了jsonwebtoken。
-3.	升级了以下依赖的版本： koa@2.3.0, koa-body@2.3.0, koa-router@7.2.1, babel-cli@6.24.1, babel-preset-es2015@6.24.1, babel-preset-stage-2@6.24.1, babel-register@6.24.1, eslint-plugin-promise@3.5.0, koa-compose@4.0.0, nodemailer@4.0.1, sequelize@4.3.2, eslint@4.2.0, eslint-config-standard@10.2.1, eslint-friendly-formatter@3.0.0, eslint-plugin-html@3.1.0, gulp-eslint@4.0.0, koa-logger@3.0.1
-
-*v0.1 2017年04月07日11:46:02*
-
-1.	升级koa为2.2.0版本。
-2.	升级了以下依赖版本到“建议版本”：
-
-```
-依赖项                     原版本  建议版本 最新版本        项目
-eslint                   3.18.0  3.19.0  3.19.0  koa2-API-scaffold
-eslint-plugin-standard    2.1.1   3.0.1   3.0.1  koa2-API-scaffold
-koa-router                7.1.0   7.1.1   7.1.1  koa2-API-scaffold
-promise-mysql             3.0.0   3.0.1   3.0.1  koa2-API-scaffold
-sequelize                3.30.2  3.30.4  3.30.4  koa2-API-scaffold
-```
-
-*v0.0.9_1 2017年03月30日15:51:03*
-
-1.	完善了gulpfile.js，不是重要的更新。
-
-*v0.0.9 2017年03月27日17:25:58*
-
-1.	修改了`src/controllers/upload.js`文件，添加了上传文件示例代码。
-2.	修复了`src/lib/mysql.js`引用路径错误的BUG。
-3.	修改了`src/controllers/api.js`GET参数获取的示例。
-
-*v0.0.8 2017年03月01日23:03:44*  
-1、在src/app.js 18行 后添加了
-
-```
-    jsonLimit: '20mb',
-    formLimit: '10mb',
-    textLimit: '20mb',
-```
-
-以免表单过长导致提交失败。
-
-*v0.0.7 2017年02月18日19:01:48*  
-1、修改了index.js、config.js（详情请看github记录），完善了对跨域的处理。 更新建议：对应github修改记录同步修改，方便将来部署调试。
-
-*v0.0.6 2017年02月17日21:17:23*  
-1、修改了src/lib/sequelize.js文件,添加了对utf8mb4的支持（要求MySQL版本>5.5）。
-
-*v0.0.5 2017年02月12日01:25:34*  
-1、修改了gulpfile.js文件，在更改文件热重启的时候无需检查全部文件，仅检查改动文件，开发速度更快。  
-2、修改了package.json中"start"项的值为"gulp nodemon"配合gulpfile.js文件的修改。
-
-*v0.0.4 2017年02月07日15:57:17*  
-1、修改了部分配置文件的配置方法，使之更为规范（老版本用户无须理会，对程序没有影响）。  
-2、修改了eslintrc.js文件中的JavaScript版本配置，改为ES8，兼容async、await。  
-3、修改gulpfile.js文件第12行，检查`src/**/*.js`文件。
