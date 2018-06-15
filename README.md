@@ -425,7 +425,7 @@ Koa的错误拦截中间件，需要配合上面的插件使用：https://github
 │       └── smtp_sendemail  # 示例插件 - 发邮件
 │   ├── tool                # 工具目录
 │       ├── PluginLoader.js # 插件引入工具
-│       └── Common.js       # 示例插件 - 发邮件
+│       └── common.js       # 示例插件 - 发邮件
 │   ├── lib                 # 库目录
 │   ├── controllers         # 控制器
 │   ├── models              # 模型

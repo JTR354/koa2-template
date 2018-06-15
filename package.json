@@ -1,8 +1,8 @@
 {
-  "name": "koa2-api-model",
+  "name": "{{ project }}",
   "version": "1.0.0",
-  "description": "Koa2 RESTful API 模版",
-  "author": "ben <ben@jkweixin.com>",
+  "description": "{{ description }}",
+  "author": "Ben <xuedengheng@outlook.com>",
   "scripts": {
     "start": "gulp nodemon",
     "dev": "gulp",
