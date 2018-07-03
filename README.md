@@ -36,10 +36,10 @@ $ node dist/app.js
 
 ### PM2部署说明
 
-提供了PM2部署RESTful API Server的示例配置，位于“pm2.js”文件中。
+提供了PM2部署RESTful API Server的示例配置，位于“pm2.json”文件中。
 
 ```
-$ pm2 start pm2.js
+$ pm2 start pm2.json
 ```
 
 引入插件介绍

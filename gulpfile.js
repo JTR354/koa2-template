@@ -36,7 +36,7 @@ gulp.task('ESlint', () => {
     }))
 })
 
-gulp.task('ESlint_nodemon', gulp.series('ESlint', function () {
+gulp.task('ESlint_nodemon', ['ESlint'], function () {
   var stream = nodemon({
     script: 'build/dev-server.js',
     execMap: {
@@ -62,7 +62,7 @@ gulp.task('ESlint_nodemon', gulp.series('ESlint', function () {
       console.error('Application has crashed!\n')
       // stream.emit('restart', 20)  // restart the server in 20 seconds
     })
-}))
+})
 
 gulp.task('nodemon', function () {
   return nodemon({
@@ -79,6 +79,6 @@ gulp.task('nodemon', function () {
   })
 })
 
-gulp.task('default', gulp.series('ESlint', 'ESlint_nodemon', function () {
+gulp.task('default', ['ESlint', 'ESlint_nodemon'], function () {
   // console.log('ESlin检查完成')
-}))
+})
