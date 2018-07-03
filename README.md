@@ -180,7 +180,7 @@ Koa的错误拦截中间件，需要配合上面的插件使用：https://github
 ├── .gitignore              # Git 忽略文件列表
 ├── gulpfile.js             # Gulp配置文件
 ├── package.json            # 描述文件
-├── pm2.js                  # pm2 部署示例文件
+├── pm2.json                # pm2 部署示例文件
 ├── build                   # build 入口目录
 │   └── dev-server.js       # 开发环境 Babel 实时编译入口
 ├── src                     # 源代码目录，编译后目标源代码位于 dist 目录
