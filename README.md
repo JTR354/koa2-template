@@ -1,7 +1,7 @@
-Koa2 RESTful API 模版
+{{ project }}
 =============================
 
-这是一个基于Koa2的轻量级RESTful API 模版，支持ES6。
+{{ description }}
 
 
 调试说明

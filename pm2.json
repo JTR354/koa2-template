@@ -1,7 +1,7 @@
 {
   "apps": [
     {
-      "name": "jike-mall-api",
+      "name": "{{ project }}",
       "script": "./dist/app.js",
       "cwd": "./",
       "watch": false,
